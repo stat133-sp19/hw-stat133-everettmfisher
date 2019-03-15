@@ -2,10 +2,10 @@
 
 Private Repository for HW assignments of Stat 133 (Spring 2019)
 
-- Name: Your name (first last)
-- Github username: usrname
-- Email: address [at] email.com
-- Lab section: 101
+- Name: Everett Fisher
+- Github username: everettmfisher
+- Email: everettmfisher@berkeley.edu
+- Lab section: 110
 - GSI: Leia Organa
 
 -----
