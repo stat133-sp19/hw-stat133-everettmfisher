@@ -6,7 +6,7 @@ Private Repository for HW assignments of Stat 133 (Spring 2019)
 - Github username: everettmfisher
 - Email: everettmfisher@berkeley.edu
 - Lab section: 110
-- GSI: Leia Organa
+- GSI: Shuni Li
 
 -----
 
