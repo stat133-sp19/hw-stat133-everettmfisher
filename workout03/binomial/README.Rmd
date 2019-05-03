@@ -1,0 +1,54 @@
+---
+output:
+  github_document:
+    html_preview: false
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+
+## Overview
+
+`"binomial"` is an [R](http://www.r-project.org/) package 
+that provides functions for binomial distribution summaries
+
+* `bin_choose()` chooses k from n
+* `bin_probability()` computes probability of k success in n trials
+* `bin_distribution()` creates object of class "bindis"
+* `bin_cumulative()` creates object of class "bincum"
+* `bin_variable()` creates object of class "binvar"
+* `bin_mean()` computes mean of a binomial distribution
+* `bin_variance()` computes variance of a binomial distribution
+* `bin_mode()` computes mode of a binomial distribution
+* `bin_skewness()` computes skewness of a binomial distribution
+* `bin_kurtosis()` computes kurtosis of a binomial distribution
+
+
+## Motivation
+
+This package has been developed for workout03 of the spring 2019 semester of Stat 133
+
+
+## Usage
+
+```{r}
+library(binomial)
+# creating a binvomial variable
+bin1 <- bin_variable(trials=5, prob=0.3)
+bin1
+
+# cumulative distribution
+bin2 <- bin_cumulative(trials=5, prob=0.3)
+bin2
+
+# summary
+summary(bin1)
+```
