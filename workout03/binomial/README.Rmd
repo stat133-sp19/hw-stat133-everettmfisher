@@ -41,7 +41,7 @@ This package has been developed for workout03 of the spring 2019 semester of Sta
 
 ```{r}
 library(binomial)
-# creating a binvomial variable
+# creating a binomial variable
 bin1 <- bin_variable(trials=5, prob=0.3)
 bin1
 

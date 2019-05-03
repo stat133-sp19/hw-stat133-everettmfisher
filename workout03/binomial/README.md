@@ -26,7 +26,7 @@ Usage
 
 ``` r
 library(binomial)
-# creating a binvomial variable
+# creating a binomial variable
 bin1 <- bin_variable(trials=5, prob=0.3)
 bin1
 #> "Binomial variable"
