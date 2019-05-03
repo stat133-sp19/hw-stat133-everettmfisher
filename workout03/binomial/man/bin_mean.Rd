@@ -17,3 +17,6 @@ computed mean
 \description{
 calculates the mean success in a binomial distribution
 }
+\examples{
+bin_mean(5, 0.3)
+}

@@ -19,3 +19,7 @@ numeric vector of probabilities
 \description{
 calculates the probability of success in a certain amount of trials
 }
+\examples{
+bin_probability(2, 5, 0.3)
+bin_probability(1:3, 5, 0.3)
+}

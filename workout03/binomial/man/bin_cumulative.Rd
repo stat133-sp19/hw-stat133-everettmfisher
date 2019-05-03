@@ -17,3 +17,6 @@ dataframe of class "bincum"
 \description{
 calculates the cumulative distribution of success in a certain amount of trials
 }
+\examples{
+bin_cumulative(5, 0.3)
+}

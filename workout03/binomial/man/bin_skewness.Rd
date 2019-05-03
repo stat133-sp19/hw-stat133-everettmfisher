@@ -17,3 +17,6 @@ computed skewness
 \description{
 calculates the skewness of a binomial distribution
 }
+\examples{
+bin_skewness(5, 0.3)
+}

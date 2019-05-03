@@ -17,3 +17,6 @@ dataframe of class "bindis"
 \description{
 calculates the distribution of different success in a certain amount of trials
 }
+\examples{
+bin_distribution(5, 0.3)
+}

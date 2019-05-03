@@ -94,6 +94,8 @@ aux_kurtosis <- function(trials=1, prob=0.3) {
 #' @return numeric vector of choose values
 #' @export
 #' @examples
+#' bin_choose(5, 2)
+#' bin_choose(5, 1:3)
 bin_choose <- function(n=1,k=1) {
   if(any(!(n%%1==0)) | any(!(k%%1==0))) {
     stop("Values must be whole numbers")
@@ -118,6 +120,8 @@ bin_choose <- function(n=1,k=1) {
 #' @return numeric vector of probabilities
 #' @export
 #' @examples
+#' bin_probability(2, 5, 0.3)
+#' bin_probability(1:3, 5, 0.3)
 bin_probability <- function(success=1, trials=2, prob=0.5) {
   check_trials(trials)
   check_success(success, trials)
@@ -137,6 +141,7 @@ bin_probability <- function(success=1, trials=2, prob=0.5) {
 #' @return dataframe of class "bindis"
 #' @export
 #' @examples
+#' bin_distribution(5, 0.3)
 bin_distribution <- function(trials=1, prob=0.5) {
   check_trials(trials)
   check_prob(prob)
@@ -163,6 +168,7 @@ plot.bindis <- function(bindis) {
 #' @return dataframe of class "bincum"
 #' @export
 #' @examples
+#' bin_cumulative(5, 0.3)
 bin_cumulative <- function(trials=1, prob=0.5) {
   check_trials(trials)
   check_prob(prob)
@@ -186,6 +192,14 @@ plot.bincum <- function(bincum) {
   lines(x=bincum$success, y=bincum$cumulative)
 }
 
+#' @title binomial variable
+#' @description creates object of class "binvar"
+#' @param trials number of trials
+#' @param prob probability of success
+#' @return object of class "binvar"
+#' @export
+#' @examples
+#' bin_variable(5, 0.3)
 bin_variable <- function(trials=1, prob=0.5) {
   check_trials(trials)
   check_prob(prob)
@@ -257,6 +271,7 @@ print.summary.binvar <- function(binsum) {
 #' @return computed mean
 #' @export
 #' @examples
+#' bin_mean(5, 0.3)
 bin_mean <- function(trials=1, prob=0.5) {
   check_trials(trials)
   check_prob(prob)
@@ -271,6 +286,7 @@ bin_mean <- function(trials=1, prob=0.5) {
 #' @return computed variance
 #' @export
 #' @examples
+#' bin_variance(5, 0.3)
 bin_variance <- function(trials=1, prob=0.5) {
   check_trials(trials)
   check_prob(prob)
@@ -299,6 +315,7 @@ bin_mode <- function(trials=1, prob=0.5) {
 #' @return computed skewness
 #' @export
 #' @examples
+#' bin_skewness(5, 0.3)
 bin_skewness <- function(trials=1, prob=0.5) {
   check_trials(trials)
   check_prob(prob)
@@ -313,6 +330,7 @@ bin_skewness <- function(trials=1, prob=0.5) {
 #' @return computed kurtosis
 #' @export
 #' @examples
+#' bin_kurtosis(5, 0.3)
 bin_kurtosis <- function(trials=1, prob=0.5) {
   check_trials(trials)
   check_prob(prob)

@@ -17,3 +17,7 @@ numeric vector of choose values
 \description{
 calculates the number of ways to choose k objects from n
 }
+\examples{
+bin_choose(5, 2)
+bin_choose(5, 1:3)
+}
