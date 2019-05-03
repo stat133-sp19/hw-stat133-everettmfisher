@@ -1,0 +1,73 @@
+---
+title: "Getting started with binomial"
+author: "Everett Fisher"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{binomial-intro}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(binomial)
+```
+
+## Binomial
+
+The package `"binomial"` contains several funcions for descriptive statistics about binomial distributions.
+
+## Creating a binomial variable
+
+We can create a `"binvar"` object with the function `bin_variable()`
+
+```{r}
+bin1 <- bin_variable(trials=5, prob=0.3)
+bin1
+```
+
+The `"binvar"` object is a list with elements `"trials"` and `"success"`.
+You can view more detailed descriptive statistics with `summary()`
+
+```{r}
+summary(bin1)
+```
+
+Each measure listed in the summary has a standalone function of the form `bin_mean`, `bin_variance`, etc.
+
+## Binomial distributions
+
+You can easily view the distribution of successes over a given amount of trials with  `bin_distribution()`
+
+```{r}
+dis1 <- bin_distribution(trials=bin1$trials, prob=bin1$prob)
+dis1
+```
+
+Or, for cumulative distributions, use `bin_cumulative()`
+
+```{r}
+dis2 <- bin_cumulative(trials=bin1$trials, prob=bin1$prob)
+dis2
+```
+
+## Plotting distributions
+
+The default plotting method for binomial distributions is a histogram.
+
+```{r}
+plot(dis1)
+```
+
+Cumulative distributions are plotted as line graphs.
+
+```{r}
+plot(dis2)
+```
